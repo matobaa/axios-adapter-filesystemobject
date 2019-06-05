@@ -13,10 +13,10 @@
 
 <body>
     <div id="dest">running...</div>
-    <script src="dist/main.js"></script>
+    <script src="dist/fso-adapter.js"></script>
     <script>
         axios.create({
-            adapter: fsoAdapter,
+            adapter: axios.fsoAdapter,
             responseType: 'document',
         }).get('data.json')
             .then(console.dir)

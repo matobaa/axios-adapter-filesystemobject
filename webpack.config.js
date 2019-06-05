@@ -1,7 +1,11 @@
 
 module.exports = {
     output: {
-        library: 'fsoAdapter',
+        filename: 'fso-adapter.js',
+        library: ['axios','fsoAdapter'],
         libraryTarget: 'umd'
-    }
+    },
+    externals: [
+        'axios',
+    ]
 }
