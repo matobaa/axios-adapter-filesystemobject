@@ -30,7 +30,7 @@ module.exports = function fsoAdapter(config) {
     if (typeof config.onDownloadProgress === 'function') { reject('config.onDownloadProgress Not Supported.'); return; }
     if (config.cancelToken) { reject('config.cancelToken Not Supported.'); return; }
 
-    var folder = fso.getFolder(document.location.href.slice('file:'.length, document.location.href.lastIndexOf('/') + 1))
+    var folder = fso.getFolder(document.location.href.slice('file:///'.length, document.location.href.lastIndexOf('/') + 1))
     var path = fso.buildPath(folder, config.url); // FIXME: Directory Traversal vulnerability
 
     switch (config.method.toUpperCase()) {

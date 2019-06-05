@@ -4,7 +4,7 @@
   "description": "axios backend adapter with ActiveX FileSystemObject",
   "main": "index.js",
   "scripts": {
-    "webpack": "webpack --mode=development",
+    "build": "webpack src/adapter/fso.js --mode=development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "MATOBA Akihiro",
